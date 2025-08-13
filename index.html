@@ -1,123 +1,164 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Gomes & Costa Consultoria</title>
-    <!-- Fontes: Roboto para texto e Montserrat para títulos -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gomes & Costa Consultoria</title>
+  <!-- Fontes Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div class="container header-flex">
-            <img src="images/logo.png" alt="Logo Gomes & Costa Consultoria" class="logo" />
-            <nav>
-                <a href="#sobre">Sobre</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#portfolio">Portfólio</a>
-                <a href="#contato">Contato</a>
-            </nav>
+  <header>
+    <div class="container header-flex">
+      <img src="images/logo.png" alt="Logo Gomes & Costa Consultoria" class="logo" />
+      <nav>
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#servicos" class="nav-link">Serviços</a>
+        <a href="#metodologia" class="nav-link">Metodologia</a>
+        <a href="#clientes" class="nav-link">Clientes</a>
+        <a href="#contato" class="nav-link cta-button">Contato</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <h1>Gomes & Costa Consultoria</h1>
+      <h2>Transformação de negócios com inteligência em dados</h2>
+      <p>Gestão de produtos, processos e soluções em Power BI, com seriedade e foco em resultado.</p>
+      <a href="#contato" class="cta-button hero-cta">Peça um orçamento</a>
+    </div>
+  </section>
+
+  <section id="sobre" class="section-section">
+    <div class="container">
+      <h2>Sobre Nós</h2>
+      <div class="sobre-content">
+        <div class="sobre-texto">
+          <p>Somos especialistas em transformar dados em resultados. Com experiência sólida em consultoria, aplicamos metodologias modernas para otimizar processos e impulsionar a tomada de decisão dos nossos clientes através do Power BI.</p>
         </div>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Gomes & Costa Consultoria</h1>
-            <h2>Transformação de negócios com inteligência em dados</h2>
-            <p>Gestão de produtos, processos e soluções em Power BI, com seriedade e foco em resultado.</p>
-            <a href="#contato" class="cta-button">Peça um orçamento</a>
+        <div class="sobre-imagem">
+          <img src="images/about-us.jpg" alt="Consultoria e dados" />
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="sobre">
-        <div class="container">
-            <h2>Sobre Nós</h2>
-            <p>
-                Somos especialistas em transformar dados em resultados. Com experiência sólida em consultoria, aplicamos metodologias modernas para otimizar processos e impulsionar a tomada de decisão dos nossos clientes através do Power BI.
-            </p>
-        </div>
-    </section>
+  <section id="servicos" class="section-section alt-bg">
+    <div class="container">
+      <h2>Nossos Serviços</h2>
+      <div class="servicos-grid">
+        <article class="servico-card">
+          <img src="images/consultoria-processos.jpg" alt="Consultoria em Processos" />
+          <h3>Consultoria em Processos</h3>
+          <p>Mapeamento e otimização dos fluxos empresariais, tornando sua operação mais ágil, precisa e eficiente.</p>
+        </article>
+        <article class="servico-card">
+          <img src="images/bisolu.jpg" alt="Soluções Power BI" />
+          <h3>Soluções Power BI</h3>
+          <p>Desenvolvimento de dashboards interativos personalizados para análises estratégicas e gestão de KPIs.</p>
+        </article>
+        <article class="servico-card">
+          <img src="images/treinamento-equipe.png" alt="Treinamentos" />
+          <h3>Treinamentos</h3>
+          <p>Capacitação de equipes em gestão de dados, indicadores e no uso eficiente do Power BI.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-    <section id="servicos" class="alt-bg">
-        <div class="container">
-            <h2>Nossos Serviços</h2>
-            <div class="servicos-grid">
-                <div class="servico-card">
-                    <h3>Consultoria em Processos</h3>
-                    <p>Mapeamento e otimização dos fluxos empresariais, tornando sua operação mais ágil, precisa e eficiente.</p>
-                </div>
-                <div class="servico-card">
-                    <h3>Soluções Power BI</h3>
-                    <p>Desenvolvimento de dashboards interativos personalizados para análises estratégicas e gestão de KPIs.</p>
-                </div>
-                <div class="servico-card">
-                    <h3>Treinamentos</h3>
-                    <p>Capacitação de equipes em gestão de dados, indicadores e no uso eficiente do Power BI.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="metodologia" class="section-section">
+    <div class="container">
+      <h2>Metodologia</h2>
+      <p>Na <strong>Gomes & Costa Consultoria</strong>, desenvolvemos <strong>soluções personalizadas e exclusivas</strong>, sempre com o cliente no centro do processo. Nosso diferencial é manter a participação ativa do cliente em todas as etapas, garantindo que o desenvolvimento do projeto esteja alinhado às suas necessidades e que o resultado final supere as expectativas.</p>
 
-    <section id="portfolio">
-        <div class="container">
-            <h2>Portfólio</h2>
-            <p>Alguns de nossos projetos ilustrativos:</p>
-            <div class="portfolio-galeria">
-                <div class="projeto">
-                    <img src="images/dashboard-exemplo.png" alt="Dashboard Power BI Exemplo" />
-                    <p>Dashboard de vendas em tempo real com indicadores visuais.</p>
-                </div>
-                <div class="projeto">
-                    <img src="images/processo.png" alt="Gestão de Processos Exemplo" />
-                    <p>Mapa de processos industriais com visualização clara de gargalos.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+      <p>O nosso processo segue um fluxo claro e eficiente:</p>
 
-    <!-- Faixa de logos de clientes -->
-    <section id="clientes" class="alt-bg clientes-logos">
-        <div class="container">
-            <h2>Clientes que confiam em nós</h2>
-            <div class="logos-container">
-                <img src="images/cliente1.png" alt="Cliente 1" class="cliente-logo" />
-                <img src="images/cliente2.png" alt="Cliente 2" class="cliente-logo" />
-                <img src="images/cliente3.png" alt="Cliente 3" class="cliente-logo" />
-                <img src="images/cliente4.png" alt="Cliente 4" class="cliente-logo" />
-                <img src="images/cliente5.png" alt="Cliente 5" class="cliente-logo" />
-            </div>
-        </div>
-    </section>
+      <ul class="metodologia-lista">
+        <li><strong>Reunião de diagnóstico:</strong> Análise detalhada das necessidades, desafios e objetivos do cliente.</li>
+        <li><strong>Proposta customizada:</strong> Desenvolvimento de uma solução sob medida e apresentação para aprovação.</li>
+        <li><strong>Execução com acompanhamento:</strong> Realização do projeto com envolvimento do cliente, ajustando cada detalhe conforme necessário.</li>
+        <li><strong>Treinamento e capacitação:</strong> Preparação da equipe para utilizar de forma segura e eficiente as ferramentas implementadas.</li>
+        <li><strong>Assistência contínua:</strong> Em alguns planos, oferecemos suporte permanente sempre que o cliente precisar, garantindo evolução constante nos resultados.</li>
+      </ul>
 
-    <section id="contato" class="alt-bg">
-        <div class="container">
-            <h2>Contato</h2>
-            <form>
-                <input type="text" placeholder="Seu nome" required />
-                <input type="email" placeholder="Seu e-mail" required />
-                <textarea placeholder="Sua mensagem" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-            <div class="contact-info">
-                <p><strong>Endereço:</strong><br>
-                   Rua Dep Chafic Cury, 310, Jardim Carvalho, Ponta Grossa – PR</p>
+      <p>Essa metodologia garante clareza, parceria e eficiência, resultando em entregas de alto impacto e valor real para cada cliente.</p>
+    </div>
+  </section>
 
-                <p><strong>Telefones dos Sócios:</strong><br>
-                   Allan Henrique Gomes – <a href="tel:+5547992620584">(47) 99262-0584</a><br>
-                   Leonardo de Souza Costa – <a href="tel:+5514991953543">(14) 99195-3543</a></p>
+  <section id="clientes" class="section-section alt-bg clientes-logos">
+    <div class="container">
+      <h2>Clientes Fidelizados</h2>
+      <div class="logos-container">
+        <img src="images/cliente1.png" alt="Cliente 1" class="cliente-logo" />
+        <img src="images/cliente2.png" alt="Cliente 2" class="cliente-logo" />
+        <img src="images/cliente3.png" alt="Cliente 3" class="cliente-logo" />
+        <img src="images/cliente4.png" alt="Cliente 4" class="cliente-logo" />
+        <img src="images/cliente5.png" alt="Cliente 5" class="cliente-logo" />
+        <img src="images/cliente6.png" alt="Cliente 6" class="cliente-logo" />
+      </div>
+    </div>
+  </section>
 
-                <p><strong>E-mail:</strong> gomesecostaconsultoria@gmail.com</p>
+  <section id="contato" class="section-section">
+    <div class="container">
+      <h2>Contato</h2>
+      <form>
+        <input type="text" placeholder="Seu nome" required />
+        <input type="email" placeholder="Seu e-mail" required />
+        <textarea placeholder="Sua mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
 
-                <p><em>📍 Atendemos todo o Brasil</em></p>
-            </div>
-        </div>
-    </section>
+      <div class="contact-info">
+        <p><strong>Endereço:</strong><br />Rua Dep Chafic Cury, 310, Jardim Carvalho, Ponta Grossa – PR</p>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Gomes & Costa Consultoria. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+        <p><strong>Telefones dos Sócios:</strong><br />
+          <span class="telefone">Allan Henrique Gomes – <a href="tel:+5547992620584">(47) 99262-0584</a></span>
+          <span class="telefone">Leonardo de Souza Costa – <a href="tel:+5514991953543">(14) 99195-3543</a></span>
+        </p>
+
+        <p><strong>E-mail:</strong> gomesecostaconsultoria@gmail.com</p>
+
+        <div class="atendimento-brasil">Atendemos todo o Brasil</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Gomes & Costa Consultoria. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navegação mobile
+    const btnMenu = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    btnMenu.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+
+    // Destacar link ativo na rolagem
+    const links = document.querySelectorAll('nav a.nav-link');
+    window.addEventListener('scroll', () => {
+      let fromTop = window.scrollY + 100;
+      links.forEach(link => {
+        const section = document.querySelector(link.hash);
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
