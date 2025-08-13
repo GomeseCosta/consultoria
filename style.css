@@ -250,10 +250,30 @@ button:hover {
 }
 
 .contact-info {
-    margin-top: 15px;
+    margin-top: 20px;
     color: var(--azul-escuro);
     font-size: 1.1rem;
     font-weight: 500;
+    line-height: 1.5;
+}
+
+.contact-info a {
+    color: var(--azul-medio);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--azul-escuro);
+    text-decoration: underline;
+}
+
+.contact-info p em {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--azul-medio);
+    display: inline-block;
+    margin-top: 10px;
 }
 
 footer {
@@ -322,8 +342,6 @@ footer {
         width: 90%;
     }
 }
-
-/* Background pattern SVG */
 
 body::before {
     content: "";
