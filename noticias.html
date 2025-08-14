@@ -16,6 +16,7 @@
       <a href="noticias.html" class="active">Notícias</a>
       <a href="contato.html" class="cta-button">Contato</a>
     </nav>
+    <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
   </div>
 </header>
 
@@ -36,5 +37,13 @@
     <p>&copy; 2025 Gomes & Costa Consultoria. Todos os direitos reservados.</p>
   </div>
 </footer>
+
+<script>
+const btnMenu3 = document.querySelector('.menu-toggle');
+const nav3 = document.querySelector('nav');
+btnMenu3.addEventListener('click', () => {
+  nav3.classList.toggle('open');
+});
+</script>
 </body>
 </html>

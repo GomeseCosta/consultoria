@@ -16,6 +16,7 @@
       <a href="noticias.html">Notícias</a>
       <a href="contato.html" class="cta-button active">Contato</a>
     </nav>
+    <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
   </div>
 </header>
 
@@ -35,8 +36,12 @@
       </div>
       <div class="box-contact">
         <p><strong>Telefones:</strong></p>
-        <span class="telefone">Allan Henrique Gomes – <a href="tel:+5547992620584">(47) 99262-0584</a></span>
-        <span class="telefone">Leonardo de Souza Costa – <a href="tel:+5514991953543">(14) 99195-3543</a></span>
+        <span class="telefone">
+          Allan Gomes – <a href="tel:+5547992620584">(47) 99262-0584</a>
+        </span>
+        <span class="telefone">
+          Leonardo Costa – <a href="tel:+5514991953543">(14) 99195-3543</a>
+        </span>
       </div>
       <div class="box-contact">
         <p><strong>E-mail:</strong> gomesecostaconsultoria@gmail.com</p>
@@ -53,5 +58,13 @@
     <p>&copy; 2025 Gomes & Costa Consultoria. Todos os direitos reservados.</p>
   </div>
 </footer>
+
+<script>
+const btnMenu = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
+btnMenu.addEventListener('click', () => {
+  nav.classList.toggle('open');
+});
+</script>
 </body>
 </html>

@@ -16,6 +16,7 @@
       <a href="noticias.html">Notícias</a>
       <a href="contato.html" class="cta-button">Contato</a>
     </nav>
+    <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
   </div>
 </header>
 
@@ -45,7 +46,7 @@
 <section class="section-section alt-bg clientes-logos">
   <div class="container">
     <h2>Clientes Fidelizados</h2>
-    <button class="seta-btn seta-esq" aria-label="Voltar clientes">&#10094;</button>
+    <button class="seta-btn seta-esq" aria-label="Anterior">&#10094;</button>
     <div class="logos-container">
       <img src="images/cliente1.png" alt="Cliente 1" class="cliente-logo" />
       <img src="images/cliente2.png" alt="Cliente 2" class="cliente-logo" />
@@ -55,7 +56,7 @@
       <img src="images/cliente6.png" alt="Cliente 6" class="cliente-logo" />
       <img src="images/cliente7.png" alt="Cliente 7" class="cliente-logo" />
     </div>
-    <button class="seta-btn seta-dir" aria-label="Avançar clientes">&#10095;</button>
+    <button class="seta-btn seta-dir" aria-label="Próximo">&#10095;</button>
   </div>
 </section>
 
@@ -66,15 +67,18 @@
 </footer>
 
 <script>
-  const container = document.querySelector('.logos-container');
-  const btnEsq = document.querySelector('.seta-esq');
-  const btnDir = document.querySelector('.seta-dir');
-  btnEsq.addEventListener('click', () => {
-    container.scrollBy({ left: -200, behavior: 'smooth' });
-  });
-  btnDir.addEventListener('click', () => {
-    container.scrollBy({ left: 200, behavior: 'smooth' });
-  });
+const btnMenu = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
+btnMenu.addEventListener('click', () => {
+  nav.classList.toggle('open');
+});
+const container = document.querySelector('.logos-container');
+document.querySelector('.seta-esq').addEventListener('click', () => {
+  container.scrollBy({ left: -200, behavior: 'smooth' });
+});
+document.querySelector('.seta-dir').addEventListener('click', () => {
+  container.scrollBy({ left: 200, behavior: 'smooth' });
+});
 </script>
 </body>
 </html>

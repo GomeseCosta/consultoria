@@ -74,6 +74,10 @@ nav a.cta-button {
   border-radius: 25px;
 }
 
+.menu-toggle {
+  display: none;
+}
+
 /* HERO */
 .hero {
   background: linear-gradient(135deg, #2238a4e6 85%, #7182c7b9 100%);
@@ -81,7 +85,6 @@ nav a.cta-button {
   padding: 90px 15px 80px;
   text-align: center;
   position: relative;
-  overflow: hidden;
 }
 
 .hero::before {
@@ -131,16 +134,6 @@ nav a.cta-button {
   padding: 14px 40px;
   border-radius: 30px;
   display: inline-block;
-  margin: 0 auto;
-  text-decoration: none !important;
-  box-shadow: 0 2px 12px #2238a41a;
-  vertical-align: middle;
-  text-align: center;
-  transition: background 0.21s;
-}
-
-.hero-cta:hover {
-  background: var(--azul-destaque);
   text-decoration: none !important;
 }
 
@@ -178,8 +171,6 @@ h2 {
 .sobre-texto {
   flex: 1 1 350px;
   font-size: 1.13rem;
-  color: var(--cinza-escuro-texto);
-  line-height: 1.58;
 }
 
 .sobre-imagem {
@@ -191,13 +182,6 @@ h2 {
   width: 100%;
   max-width: 400px;
   border-radius: 12px;
-}
-
-@media (max-width: 900px) {
-  .sobre-content {
-    flex-direction: column;
-    text-align: center;
-  }
 }
 
 /* SERVIÇOS */
@@ -230,7 +214,6 @@ h2 {
   padding: 0;
   list-style: none;
 }
-
 .metodologia-lista li {
   background: var(--azul-claro);
   padding: 12px 18px;
@@ -240,11 +223,10 @@ h2 {
   padding-left: 40px;
 }
 
-/* CLIENTES COM SETAS */
+/* CLIENTES COM SETAS (desktop) */
 .clientes-logos {
   position: relative;
 }
-
 .clientes-logos .logos-container {
   display: flex;
   flex-wrap: nowrap;
@@ -252,14 +234,11 @@ h2 {
   gap: 55px;
   scroll-behavior: smooth;
 }
-
 .cliente-logo {
   flex: 0 0 auto;
   max-height: 65px;
   max-width: 160px;
-  transition: opacity 0.3s ease;
 }
-
 .seta-btn {
   position: absolute;
   top: 50%;
@@ -270,10 +249,8 @@ h2 {
   font-size: 2rem;
   padding: 5px 10px;
   cursor: pointer;
-  opacity: 0.8;
   border-radius: 50%;
 }
-
 .seta-esq { left: -10px; }
 .seta-dir { right: -10px; }
 
@@ -287,29 +264,21 @@ h2 {
   box-shadow: 0 8px 32px #2238a410;
   text-align: center;
 }
-
 .contato-page form {
   display: flex;
   flex-direction: column;
   gap: 18px;
   margin-bottom: 38px;
 }
-
 .contato-page input,
 .contato-page textarea {
   padding: 13px 17px;
   border: 2px solid var(--azul-medio);
   border-radius: 7px;
   font-size: 1.06rem;
-  color: var(--azul-escuro);
   background: var(--azul-claro);
 }
-
-.contato-page textarea {
-  min-height: 80px;
-  resize: vertical;
-}
-
+.contato-page textarea { min-height: 80px; }
 .contato-page button {
   background: var(--azul-escuro);
   color: var(--white);
@@ -318,7 +287,6 @@ h2 {
   font-size: 1.13rem;
   font-weight: 600;
   padding: 12px 40px;
-  margin-top: 6px;
   cursor: pointer;
 }
 
@@ -329,7 +297,6 @@ h2 {
   margin-top: 25px;
   align-items: center;
 }
-
 .box-contact {
   background: var(--azul-claro);
   border-radius: 7px;
@@ -337,9 +304,25 @@ h2 {
   width: 100%;
 }
 
+/* ALINHAMENTO DOS TELEFONES */
+.contact-info .box-contact {
+  text-align: center;
+}
+.contact-info .box-contact p {
+  margin-bottom: 8px;
+}
 .contact-info .telefone {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  font-size: 1.07rem;
+  color: var(--azul-escuro);
+  padding-left: 0;
+}
+.contact-info .telefone::before {
+  content: "📞 ";
+  color: var(--azul-medio);
+  font-size: 1em;
+  margin-right: 5px;
 }
 
 /* FOOTER */
@@ -348,4 +331,42 @@ footer {
   color: var(--white);
   text-align: center;
   padding: 25px 15px;
+}
+
+/* ===== MOBILE FIXES ===== */
+@media (max-width: 650px) {
+  nav { display: none; }
+  nav.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 65px; right: 15px;
+    background: var(--azul-escuro);
+    border-radius: 12px;
+    padding: 10px;
+    width: 70vw;
+    box-shadow: 0 2px 20px #0003;
+  }
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 2rem;
+    color: var(--white);
+    background: none;
+    border: none;
+  }
+  .hero h1 { font-size: 1.35rem; }
+  .hero h2 { font-size: 1rem; padding: 6px 4vw; }
+  .sobre-content { flex-direction: column; text-align: center; }
+  .clientes-logos .logos-container {
+    gap: 22px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+  }
+  .clientes-logos .logos-container::-webkit-scrollbar { display: none; }
+  .cliente-logo { max-width: 95px; max-height: 50px; }
+  .seta-btn { display: none; }
 }

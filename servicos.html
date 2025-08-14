@@ -16,6 +16,7 @@
       <a href="noticias.html">Notícias</a>
       <a href="contato.html" class="cta-button">Contato</a>
     </nav>
+    <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
   </div>
 </header>
 
@@ -52,7 +53,7 @@
       <li><strong>Proposta customizada:</strong> Desenvolvimento de uma solução sob medida e apresentação para aprovação.</li>
       <li><strong>Execução com acompanhamento:</strong> Realização do projeto com envolvimento do cliente, ajustando cada detalhe conforme necessário.</li>
       <li><strong>Treinamento e capacitação:</strong> Preparação da equipe para utilizar de forma segura e eficiente as ferramentas implementadas.</li>
-      <li><strong>Assistência contínua:</strong> Em alguns planos, oferecemos suporte permanente sempre que o cliente precisar, garantindo evolução constante nos resultados.</li>
+      <li><strong>Assistência contínua:</strong> Em alguns planos, oferecemos suporte permanente sempre que o cliente precisar.</li>
     </ul>
     <p>Essa metodologia garante clareza, parceria e eficiência, resultando em entregas de alto impacto e valor real para cada cliente.</p>
   </div>
@@ -63,5 +64,13 @@
     <p>&copy; 2025 Gomes & Costa Consultoria. Todos os direitos reservados.</p>
   </div>
 </footer>
+
+<script>
+const btnMenu2 = document.querySelector('.menu-toggle');
+const nav2 = document.querySelector('nav');
+btnMenu2.addEventListener('click', () => {
+  nav2.classList.toggle('open');
+});
+</script>
 </body>
 </html>
