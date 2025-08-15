@@ -23,11 +23,13 @@
 <section class="section-section contato-page">
   <div class="container">
     <h2>Fale Conosco</h2>
-    <form>
-      <input type="text" placeholder="Seu nome" required />
-      <input type="email" placeholder="Seu e-mail" required />
-      <textarea placeholder="Sua mensagem" required></textarea>
+    <form action="https://formsubmit.co/gomesecostaconsultoria@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Seu nome" required />
+      <input type="email" name="email" placeholder="Seu e-mail" required />
+      <textarea name="message" placeholder="Sua mensagem" required></textarea>
       <button type="submit">Enviar</button>
+      <input type="hidden" name="_next" value="sucesso.html">
+      <input type="hidden" name="_captcha" value="false">
     </form>
 
     <div class="contact-info">
@@ -36,12 +38,8 @@
       </div>
       <div class="box-contact">
         <p><strong>Telefones:</strong></p>
-        <span class="telefone">
-          Allan Gomes – <a href="tel:+5547992620584">(47) 99262-0584</a>
-        </span>
-        <span class="telefone">
-          Leonardo Costa – <a href="tel:+5514991953543">(14) 99195-3543</a>
-        </span>
+        <span class="telefone">Allan Henrique Gomes – <a href="tel:+5547992620584">(47) 99262-0584</a></span>
+        <span class="telefone">Leonardo de Souza Costa – <a href="tel:+5514991953543">(14) 99195-3543</a></span>
       </div>
       <div class="box-contact">
         <p><strong>E-mail:</strong> gomesecostaconsultoria@gmail.com</p>
@@ -58,7 +56,6 @@
     <p>&copy; 2025 Gomes & Costa Consultoria. Todos os direitos reservados.</p>
   </div>
 </footer>
-
 <script>
 const btnMenu = document.querySelector('.menu-toggle');
 const nav = document.querySelector('nav');

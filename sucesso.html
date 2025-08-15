@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato enviado!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="container header-flex">
+    <img src="images/logo.png" alt="Logo Gomes & Costa Consultoria" class="logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="servicos.html">Serviços & Metodologia</a>
+      <a href="noticias.html">Notícias</a>
+      <a href="contato.html" class="cta-button active">Contato</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+  </div>
+</header>
+
+<section class="section-section contato-page">
+  <div class="container">
+    <h2>Contato enviado com sucesso!</h2>
+    <p style="font-size:1.3rem; color:var(--azul-escuro); margin:34px 0;">
+      <strong>Ótimo, nossa equipe retornará o contato em até 24 horas!</strong>
+    </p>
+    <a href="index.html" class="cta-button hero-cta" style="margin-top:18px;">Voltar para página inicial</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Gomes & Costa Consultoria. Todos os direitos reservados.</p>
+  </div>
+</footer>
+<script>
+const btnMenu = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
+btnMenu.addEventListener('click', () => {
+  nav.classList.toggle('open');
+});
+</script>
+</body>
+</html>
