@@ -6,32 +6,32 @@
   <title>Notícias | Gomes & Costa Consultoria</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .noticia-card {
-      display: flex;
-      flex-direction: row;
+    .noticia-card-grid {
+      display: grid;
+      grid-template-areas:
+        "info img"
+        "btn img";
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto auto;
       background: #fff;
       border-radius: 14px;
       box-shadow: 0 4px 20px #2238a41a;
       margin-bottom: 40px;
       padding: 24px 34px;
-      align-items: center; /* vertical center desktop */
-      gap: 40px;
       border: 1.5px solid var(--azul-claro);
       max-width: 900px;
       margin-left: auto;
       margin-right: auto;
+      align-items: center;
     }
     .noticia-info {
-      flex: 2 1 390px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
+      grid-area: info;
+      align-self: center;
     }
     .noticia-titulo {
-      font-size: 1.31rem;
-      font-weight: 700;
-      color: var(--azul-escuro);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #183a75; /* azul destaque, ajuste para sua identidade visual */
       margin-bottom: 16px;
     }
     .noticia-data {
@@ -44,26 +44,8 @@
       font-size: 1.08rem;
       margin-bottom: 18px;
     }
-    .noticia-link-btn {
-      display: inline-block;
-      background: var(--azul-destaque);
-      color: #fff;
-      padding: 10px 36px;
-      border-radius: 24px;
-      font-weight: 600;
-      text-decoration: none;
-      font-size: 1.07rem;
-      transition: background 0.2s;
-      margin-top: 14px;
-      text-align: center;
-      align-self: flex-start;
-    }
-    .noticia-link-btn:hover {
-      background: var(--azul-escuro);
-    }
     .noticia-img {
-      flex: 1 1 260px;
-      min-width: 250px;
+      grid-area: img;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -74,12 +56,29 @@
       border-radius: 10px;
       box-shadow: 0 2px 14px #0002;
       object-fit: cover;
-      margin: 0;
+    }
+    .noticia-link-btn {
+      grid-area: btn;
+      background: var(--azul-destaque);
+      color: #fff;
+      padding: 10px 36px;
+      border-radius: 24px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.07rem;
+      transition: background 0.2s;
+      margin-top: 10px;
+      text-align: center;
+      border: none;
+      max-width: 325px;
+      display: block;
+    }
+    .noticia-link-btn:hover {
+      background: var(--azul-escuro);
     }
     @media (max-width: 900px) {
-      .noticia-card {
+      .noticia-card-grid {
         max-width: 99vw;
-        gap: 20px;
         padding: 14px;
       }
       .noticia-img img {
@@ -87,33 +86,33 @@
       }
     }
     @media (max-width: 760px) {
-      .noticia-card {
-        flex-direction: column;
+      .noticia-card-grid {
+        grid-template-areas:
+          "info"
+          "img"
+          "btn";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 18px;
         max-width: 99vw;
-        gap: 8px;
-        padding: 9px;
-        border-width: 1px;
+        padding: 10px;
         align-items: center;
       }
       .noticia-info {
         width: 100%;
-        align-items: center;
         text-align: left;
       }
-      .noticia-img {
+      .noticia-link-btn {
         width: 100%;
-        justify-content: center;
-        margin: 16px 0 8px 0;
+        margin-top: 6px;
+        margin-bottom: 8px;
+        max-width: 100vw;
+        align-self: center;
       }
       .noticia-img img {
         max-width: 96vw;
         max-height: 180px;
-      }
-      .noticia-link-btn {
-        width: 100%;
-        margin-top: 18px;
-        margin-bottom: 8px;
-        align-self: center;
+        margin: 0 auto;
       }
     }
   </style>
@@ -135,22 +134,22 @@
 <section class="section-section">
   <div class="container">
     <h2>Publicações</h2>
-    <div class="noticia-card">
+    <div class="noticia-card-grid">
       <div class="noticia-info">
         <span class="noticia-data">15 de agosto de 2025</span>
         <div class="noticia-titulo">
-          Você consegue mensurar quanto dinheiro é gasto com retrabalho na sua empresa semanalmente?
+          <strong>Você consegue mensurar quanto dinheiro é gasto com retrabalho na sua empresa semanalmente?</strong>
         </div>
         <div class="noticia-resumo">
           A maioria das empresas do setor industrial ainda enfrentam grandes desafios quando o assunto é medir — de forma confiável e objetiva — os custos ocultos do retrabalho e das perdas semanais em suas operações.<br><br>
           O monitoramento contínuo dos indicadores de eficiência, qualidade, produtividade e taxas de refugo é fundamental para identificar gargalos e oportunidades de aprimoramento.<br><br>
           <strong>Veja como dashboards claros podem revolucionar a sua tomada de decisão!</strong>
         </div>
-        <a href="noticia_retrabalho.html" class="noticia-link-btn">Ler notícia completa</a>
       </div>
       <div class="noticia-img">
         <img src="images/dashboard-exemplo.png" alt="Dashboard industrial ilustrativo">
       </div>
+      <a href="noticia_retrabalho.html" class="noticia-link-btn">Ler notícia completa</a>
     </div>
   </div>
 </section>
