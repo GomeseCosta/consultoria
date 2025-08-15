@@ -7,20 +7,26 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     .noticia-card {
+      display: flex;
+      flex-direction: row;
       background: #fff;
       border-radius: 14px;
       box-shadow: 0 4px 20px #2238a41a;
       margin-bottom: 40px;
       padding: 18px 30px;
+      align-items: center;
+      gap: 38px;
       border: 1.5px solid var(--azul-claro);
-      max-width: 680px;
+      max-width: 900px;
       margin-left: auto;
       margin-right: auto;
     }
     .noticia-info {
+      flex: 2 1 350px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      justify-content: center;
     }
     .noticia-titulo {
       font-size: 1.27rem;
@@ -37,20 +43,6 @@
     .noticia-resumo {
       font-size: 1.08rem;
       margin-bottom: 18px;
-    }
-    .noticia-img {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 18px;
-    }
-    .noticia-img img {
-      max-width: 320px;
-      max-height: 180px;
-      border-radius: 10px;
-      box-shadow: 0 2px 14px #0002;
-      object-fit: cover;
-      width: 100%;
-      height: auto;
     }
     .noticia-link-btn {
       display: inline-block;
@@ -69,14 +61,58 @@
     .noticia-link-btn:hover {
       background: var(--azul-escuro);
     }
-    @media (max-width: 760px) {
+    .noticia-img {
+      flex: 1 1 250px;
+      min-width: 220px;
+      text-align: right;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .noticia-img img {
+      max-width: 330px;
+      max-height: 190px;
+      border-radius: 10px;
+      box-shadow: 0 2px 14px #0002;
+      object-fit: cover;
+      margin: 0 0 0 16px;
+    }
+    @media (max-width: 900px) {
       .noticia-card {
-        padding: 10px;
         max-width: 99vw;
+        gap: 20px;
+        padding: 12px;
       }
       .noticia-img img {
-        max-width: 98vw;
+        max-width: 92vw;
+        margin-left: 0;
+      }
+    }
+    @media (max-width: 760px) {
+      .noticia-card {
+        flex-direction: column;
+        max-width: 99vw;
+        gap: 8px;
+        padding: 10px;
+        border-width: 1px;
+      }
+      .noticia-info {
+        width: 100%;
+        align-items: center;
+        text-align: left;
+      }
+      .noticia-img {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 8px;
+      }
+      .noticia-img img {
+        max-width: 96vw;
         max-height: 180px;
+        margin: 0;
+      }
+      .noticia-link-btn {
+        width: 100%;
       }
     }
   </style>
@@ -109,10 +145,10 @@
           O monitoramento contínuo dos indicadores de eficiência, qualidade, produtividade e taxas de refugo é fundamental para identificar gargalos e oportunidades de aprimoramento.<br><br>
           <strong>Veja como dashboards claros podem revolucionar a sua tomada de decisão!</strong>
         </div>
-        <div class="noticia-img">
-          <img src="images/dashboard-exemplo.png" alt="Dashboard industrial ilustrativo">
-        </div>
         <a href="noticia_retrabalho.html" class="noticia-link-btn">Ler notícia completa</a>
+      </div>
+      <div class="noticia-img">
+        <img src="images/dashboard-exemplo.png" alt="Dashboard industrial ilustrativo">
       </div>
     </div>
   </div>
