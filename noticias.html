@@ -5,6 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Notícias | Gomes & Costa Consultoria</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .noticia-card {
+      display: flex;
+      flex-wrap: wrap;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px #2238a41a;
+      margin-bottom: 40px;
+      padding: 18px 30px;
+      align-items: center;
+      gap: 38px;
+    }
+    .noticia-info {
+      flex: 1 1 340px;
+      min-width: 260px;
+    }
+    .noticia-img {
+      flex: 0 1 340px;
+      min-width: 210px;
+      text-align: right;
+    }
+    .noticia-img img {
+      max-width: 320px;
+      max-height: 180px;
+      border-radius: 10px;
+      box-shadow: 0 2px 14px #0002;
+      object-fit: cover;
+    }
+    .noticia-titulo {
+      font-size: 1.27rem;
+      font-weight: 700;
+      color: var(--azul-escuro);
+      margin-bottom: 14px;
+    }
+    .noticia-data {
+      display: block;
+      color: var(--azul-medio);
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+    .noticia-resumo {
+      font-size: 1.08rem;
+      margin-bottom: 18px;
+    }
+    .noticia-link-btn {
+      display: inline-block;
+      background: var(--azul-destaque);
+      color: #fff;
+      padding: 10px 36px;
+      border-radius: 24px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.04rem;
+      transition: background 0.2s;
+    }
+    .noticia-link-btn:hover {
+      background: var(--azul-escuro);
+    }
+    @media (max-width: 760px) {
+      .noticia-card { flex-direction: column; padding: 16px; gap: 20px; }
+      .noticia-img { text-align: center; }
+      .noticia-img img { max-width: 92vw; }
+    }
+  </style>
 </head>
 <body>
 <header>
@@ -22,13 +86,25 @@
 
 <section class="section-section">
   <div class="container">
-    <h2>Notícias & Publicações</h2>
-    <article class="noticia">
-      <h3>Como o Power BI Revolucionou a Gestão de Indicadores</h3>
-      <span class="noticia-data">10 de agosto de 2025</span>
-      <p>Descubra como ajudamos uma indústria a modernizar o controle de dados...</p>
-      <a class="noticia-link" href="#">Leia mais</a>
-    </article>
+    <h2>Publicações</h2>
+
+    <div class="noticia-card">
+      <div class="noticia-info">
+        <span class="noticia-data">15 de agosto de 2025</span>
+        <div class="noticia-titulo">
+          Você consegue mensurar quanto dinheiro é gasto com retrabalho na sua empresa semanalmente?
+        </div>
+        <div class="noticia-resumo">
+          A maioria das empresas do setor industrial ainda enfrentam grandes desafios quando o assunto é medir — de forma confiável e objetiva — os custos ocultos do retrabalho e das perdas semanais em suas operações.<br><br>
+          O monitoramento contínuo dos indicadores de eficiência, qualidade, produtividade e taxas de refugo é fundamental para identificar gargalos e oportunidades de aprimoramento.<br><br>
+          <strong>Veja como dashboards claros podem revolucionar a sua tomada de decisão!</strong>
+        </div>
+        <a href="noticia_retrabalho.html" class="noticia-link-btn">Ler notícia completa</a>
+      </div>
+      <div class="noticia-img">
+        <img src="images/dashboard-exemplo.png" alt="Dashboard industrial ilustrativo">
+      </div>
+    </div>
   </div>
 </section>
 
@@ -37,7 +113,6 @@
     <p>&copy; 2025 Gomes & Costa Consultoria. Todos os direitos reservados.</p>
   </div>
 </footer>
-
 <script>
 const btnMenu3 = document.querySelector('.menu-toggle');
 const nav3 = document.querySelector('nav');
