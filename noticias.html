@@ -31,7 +31,7 @@
     .noticia-titulo {
       font-size: 1.35rem;
       font-weight: 800;
-      color: #183a75; /* azul destaque, ajuste para sua identidade visual */
+      color: #183a75;
       margin-bottom: 16px;
     }
     .noticia-data {
@@ -135,6 +135,7 @@
 <section class="section-section">
   <div class="container">
     <h2>Publicações</h2>
+
     <div class="noticia-card-grid">
       <div class="noticia-info">
         <span class="noticia-data">15 de agosto de 2025</span>
@@ -152,6 +153,25 @@
       </div>
       <a href="noticia_retrabalho.html" class="noticia-link-btn">Ler notícia completa</a>
     </div>
+
+    <div class="noticia-card-grid">
+      <div class="noticia-info">
+        <span class="noticia-data">16 de agosto de 2025</span>
+        <div class="noticia-titulo">
+          <strong>Transportadora TNT revolucionou sua produtividade com dashboards de BI e redes neurais</strong>
+        </div>
+        <div class="noticia-resumo">
+          Descubra como a TNT, gigante do setor logístico, aumentou eficiência e reduziu gastos adotando indicadores avançados de BI e inteligência artificial.<br><br>
+          Veja como sua empresa pode analisar dados em tempo real, prever gargalos operacionais e automatizar decisões usando dashboards integrados e bases SQL — e como as redes neurais estão transformando a gestão de pessoas e processos.<br><br>
+          <strong>Leia e inspire-se para dar o próximo passo na sua gestão!</strong>
+        </div>
+      </div>
+      <div class="noticia-img">
+        <img src="images/dashboard-neural-bi.jpg" alt="Dashboard ilustrativo: produtividade, BI e rede neural">
+      </div>
+      <a href="noticia_produtividade_bi.html" class="noticia-link-btn">Ler notícia completa</a>
+    </div>
+
   </div>
 </section>
 
@@ -160,12 +180,13 @@
     <p>&copy; 2025 Gomes & Costa Consultoria. Todos os direitos reservados.</p>
   </div>
 </footer>
+
 <script>
-const btnMenu3 = document.querySelector('.menu-toggle');
-const nav3 = document.querySelector('nav');
-btnMenu3.addEventListener('click', () => {
-  nav3.classList.toggle('open');
-});
+  const btnMenu3 = document.querySelector('.menu-toggle');
+  const nav3 = document.querySelector('nav');
+  btnMenu3.addEventListener('click', () => {
+    nav3.classList.toggle('open');
+  });
 </script>
 </body>
 </html>
